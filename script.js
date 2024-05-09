@@ -26,7 +26,7 @@ function calcola() {
     var limite = costante * altezza * dislocazione * distanza * angolo * presa * relazione;
     var indiceEsposizione = peso / limite;
 
-    var url = "risultato.html?";
+    var url = "result.html?";
     url += "eta=" + eta;
     url += "&sesso=" + sesso;
     url += "&altezza=" + altezza;
