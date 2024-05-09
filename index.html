@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVR-calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-normal tracking-normal">
+    <div class="container mx-auto py-10">
+        <h1 class="text-3xl text-center mb-8">CALCOLA L'INDICE VALUTAZIONE RISCHIO</h1>
+        <div class="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg border border-gray-300 p-8">
+            <form id="calcolaForm" action="result.html" method="GET">
+                <div class="overflow-x-auto mb-4">
+                    <table class="w-full">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 border">Voce</th>
+                                <th class="px-4 py-2 border">Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2"><label for="eta">Età</label></td>
+                                <td class="px-4 py-2">
+                                    <input type="radio" name="eta" id="eta1" value="0" checked>
+                                    <label for="eta1" class="mr-2"> >18</label>
+                                    <input type="radio" name="eta" id="eta2" value="1">
+                                    <label for="eta2"> 15-18</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2"><label for="sesso">Sesso</label></td>
+                                <td class="px-4 py-2">
+                                    <input type="radio" name="sesso" value="0" checked> Maschio
+                                    <input type="radio" name="sesso" value="1"> Femmina
+                                </td>
+                            </tr>
+                            <!-- Other rows with input elements -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center">
+                    <button type="button" onclick="calcola()" class="bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
+                        Calcola
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
